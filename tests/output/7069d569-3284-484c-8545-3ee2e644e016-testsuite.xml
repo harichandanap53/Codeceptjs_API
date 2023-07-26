@@ -1,0 +1,27 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1690351759333' stop='1690351759359'>
+    <name>DELETE Request:</name>
+    <title>DELETE Request:</title>
+    <test-cases>
+        <test-case start='1690351759337' status='failed' stop='1690351759350'>
+            <name>API Test</name>
+            <title>API Test</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='codeceptjs'/>
+            </labels>
+            <parameters/>
+            <steps/>
+            <attachments/>
+            <failure>
+                <message>Cannot read properties of undefined (reading 'findName')</message>
+                <stack-trace>TypeError: Cannot read properties of undefined (reading 'findName')
+                    at Actor.createNewUser (C:\API_POC\tests\steps\steps.ts:8:26)
+                    at MetaStep.run (C:\API_POC\node_modules\codeceptjs\lib\step.js:278:19)
+                    at Context.&lt;anonymous> (C:\API_POC\tests\deleterequest.ts:7:25)
+                    at promiseRetry.retries.retries (C:\API_POC\node_modules\codeceptjs\lib\scenario.js:143:18)
+                    at C:\API_POC\node_modules\promise-retry\index.js:29:24</stack-trace>
+            </failure>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>

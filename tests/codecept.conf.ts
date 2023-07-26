@@ -16,14 +16,28 @@ export const config: CodeceptJS.MainConfig = {
     },
     JSONResponse: {},
   },
+  ApiDataFactory: {
+    endpoint: "https://reqres.in",
+    cleanup: false,
+    headers: {
+      "Content-Type": "application/json",
+      Accept: "application/json",
+    },
+    factories: {
+      user: {
+        factory: "./Factories/apiuser",
+        create: (data) => ({ method: "POST", url: "/api/users", data }),
+      },
+    },
+  },
   include: {
-    I: "./steps_file",
+    I: "./steps/steps.ts",
   },
   name: "API_POC",
   plugins: {
     allure: {
       enabled: true,
-      //require: "@codeceptjs/allure-legacy",
+      require: "@codeceptjs/allure-legacy",
     },
   },
 };
